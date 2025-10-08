@@ -121,6 +121,12 @@ public class Lab5_task2 extends Application{
             totals[2] = totals[1] + totals[1]*(tip.getValue()* 0.01) + totals[1]*0.15;
             lbl9.setText("Total: " + totals[2] + "$");
         });
+        clear.setOnAction(e -> {
+            beverage.getSelectionModel().clearSelection();
+            appetizer.getSelectionModel().clearSelection();
+            main.getSelectionModel().clearSelection();
+            dessert.getSelectionModel().clearSelection();
+        });
         Scene s = new Scene(gp, 1000, 500);
         
         stage.setTitle("Restaurant Menu");
